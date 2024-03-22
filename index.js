@@ -1,6 +1,6 @@
 #! /usr/bin/env node              
 import inquirer from "inquirer";
-const answers = await inquirer.prompt([
+const answer = await inquirer.prompt([
     {
         type: "number",
         name: "firstNumber",
@@ -15,16 +15,16 @@ const answers = await inquirer.prompt([
     },
 ]);
 //conditional statment//
-if (answers.operator === "addition") {
+if (answer.operator === "addition") {
     console.log(answers.firstNumber + answers.secondNumber);
 }
-else if (answers.operator === "subtraction") {
+else if (answer.operator === "subtraction") {
     console.log(answers.firstNumber - answers.secondNumber);
 }
-else if (answers.operator === "multiplication") {
+else if (answer.operator === "multiplication") {
     console.log(answers.firstNumber * answers.secondNumber);
 }
-else if (answers.operator === "division") {
+else if (answer.operator === "division") {
     console.log(answers.firstNumber / answers.secondNumber);
 }
 else {
